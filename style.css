@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    font-family: "poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-image: url('images/img1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+header.article1 {
+    background-image: url('images/img11.jpg');
+}
+header.articles {
+    background-image: url('images/img13.jpg');
+}
+header.about {
+    background-image: url('images/img12.jpg');
+}
+header section p {
+    display: none;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav a {
+    display: flex;
+    justify-content: center;
+}
+nav a:hover {
+    transition: 0.5s ease, transform 0.5s ease;
+    color: #DEA02A;
+}
+nav a img {
+    width: 20%;
+}
+nav ul li.selected {
+    text-decoration: underline #DEA02A 3px;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+}
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+header section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 0 0 2rem;
+    color: #fff;
+}
+h1 {
+    font-family: "Johmuria", serif;
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 12ch;
+    margin: 5rem 0;
+    align-self: center;
+    grid-column: span 2;
+}
+
+h2 {
+    font-family: "Johmuria", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    grid-column: span 12;
+    margin: 2.5rem 0 0.5rem 0;
+}
+main {
+    margin: 2rem;
+}
+main section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 1rem;
+
+}
+
+main section img {
+    width: 100%;
+}
+main section a {
+    width: 100%;
+    grid-column: span 12;
+}
+main section article {
+    background-color: #efefef;
+    border-radius: 20px;
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+main section article h3 {
+    font-family: "Johmuria", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    grid-column: span 12;
+    text-align: center;
+}
+main section article img {
+    width: 80%;
+}
+main section article a {
+    background-color: #DEA02A;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 20px;
+}
+main section article a:hover {
+    background-color: #c17d00;
+    transition: 0.5s ease, transform 0.5s ease;
+}
+main section iframe {
+    width: 100%;
+    grid-column: span 12;
+}
+footer {
+    background-color: #efefef;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav a {
+        display: inherit;
+        justify-content: left;
+    }
+    header section {
+        margin: 0 0 0 3rem;
+    }
+    header section p {
+        max-width: 50ch;
+        align-self: center;
+        display: contents;
+    }
+    h1 {
+        font-family: "Johmuria", serif;
+        font-size: 5rem;
+        font-weight: bold;
+        max-width: 12ch;
+        margin: 6rem 0 2rem 0;
+        align-self: center;
+        grid-column: span 2;
+    }
+    main section h2 {
+        grid-area: 1 / 2 / 2 / 12;
+    }
+    main section a:nth-child(2) {
+        grid-area: 2 / 2 / 3 / 5;
+    }
+    main section a:nth-child(3) {
+        grid-area: 2 / 5 / 3 / 8;
+    }
+    main section a:nth-child(4) {
+        grid-area: 2 / 8 / 4 / 12;
+    }
+    main section a:nth-child(5) {
+        grid-area: 3 / 2 / 4 / 8;
+    }
+    main section.articles h2 {
+        grid-column-start: 2;
+        grid-column-end: 11;
+    }
+    main section.articles article:nth-of-type(1) {
+        grid-column-start: 3;
+        grid-column-end: 7;
+    }
+    main section.articles article:nth-of-type(2) {
+        grid-column-start: 7;
+        grid-column-end: 11;
+    }
+    main section.articles article:nth-of-type(3) {
+        grid-column-start: 3;
+        grid-column-end: 7;
+    }
+    main section.articles article:nth-of-type(4) {
+        grid-column-start: 7;
+        grid-column-end: 11;
+    }
+    main section.text-img p {
+        grid-area: 2 / 6 / 3 / 12;
+        margin-top: 0;
+    }
+    main section.text-img img {
+        grid-area: 2 / 2 / 3 / 6;
+        
+    }
+    
+}
